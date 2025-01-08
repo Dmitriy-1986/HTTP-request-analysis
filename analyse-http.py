@@ -14,7 +14,7 @@ def get_http_connections():
                     process_info = {
                         'pid': conn.pid,
                         'name': process.name(),
-                        'exe': process.exe(),  # Путь к исполняемому файлу
+                        'exe': process.exe(), 
                         'local_address': conn.laddr.ip,
                         'local_port': conn.laddr.port,
                         'remote_address': conn.raddr.ip,
