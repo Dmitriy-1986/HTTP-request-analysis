@@ -30,8 +30,10 @@ if __name__ == '__main__':
     connections = get_http_connections()
     if connections:
         for conn in connections:
-            print(f"PID: {conn['pid']}, Name: {conn['name']}, Executable: {conn['exe']}, "
-                  f"Local: {conn['local_address']}:{conn['local_port']}, "
-                  f"Remote: {conn['remote_address']}:{conn['remote_port']}")
+            print(f"Идентификатор процесса: {conn['pid']}, \n" 
+                  f"Имя процесса: {conn['name']}, \n"
+                  f"Исполнимый файл: {conn['exe']}, \n"
+                  f"Локальный IP и Локальный порт: {conn['local_address']}:{conn['local_port']}, \n"
+                  f"Удалённый IP и Удалённый порт: {conn['remote_address']}:{conn['remote_port']} \n")
     else:
         print("No HTTP/HTTPS connections found.")
